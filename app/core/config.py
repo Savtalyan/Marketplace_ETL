@@ -23,6 +23,8 @@ class Settings(BaseSettings):
     # TODO
     # implement database configurations here 
 
+    DATABASE_URL : str = "sqlite:///./marketplace_etl.db"
+
 
     # Logging configs 
     LOG_LEVEL : str = "INFO"

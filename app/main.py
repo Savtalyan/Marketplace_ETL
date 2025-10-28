@@ -6,6 +6,7 @@ import logging
 import time 
 
 from app.core.config import settings
+from app.core.database import create_db_and_tables
 from app.utils.logger import setup_logging
 
 # setup logging first
@@ -16,7 +17,7 @@ async def lifespan(app: FastAPI):
     # Startup : initializing resources
     logging.info("Application starting up...")
 
-    # TODO init database connection 
+    create_db_and_tables()
     # TODO init HTTP client session
 
     yield # run app 
